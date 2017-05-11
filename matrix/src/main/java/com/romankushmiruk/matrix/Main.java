@@ -1,4 +1,4 @@
-package com.romankushmiruk.Matrix;
+package com.romankushmiruk.matrix;
 
 /**
  * Created by roman on 13.04.17.
@@ -16,7 +16,7 @@ public class Main {
             Matrix m4 = Multiplicator.multiply(m1, m2);
             System.out.println(m4);
         } catch (NullPointerException e) {
-            System.out.println("Matrix does'nt exist: " + e);
+            System.out.println("matrix does'nt exist: " + e);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Wrong coordinates: " + e);
         }

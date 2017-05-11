@@ -1,4 +1,4 @@
-package com.romankushmiruk.Matrix;
+package com.romankushmiruk.matrix;
 
 /**
  * Created by roman on 13.04.17.
