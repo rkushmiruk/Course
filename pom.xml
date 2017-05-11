@@ -11,6 +11,7 @@
     <modules>
         <module>matrix</module>
         <module>flowcontrol</module>
+        <module>helloworldmvc</module>
     </modules>
 
     <dependencies>
