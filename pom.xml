@@ -12,6 +12,7 @@
         <module>matrix</module>
         <module>flowcontrol</module>
         <module>helloworldmvc</module>
+        <module>moreorless</module>
     </modules>
 
     <dependencies>

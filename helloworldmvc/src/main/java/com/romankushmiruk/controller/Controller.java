@@ -3,7 +3,6 @@ package com.romankushmiruk.controller;
 import com.romankushmiruk.model.Model;
 import com.romankushmiruk.view.View;
 
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
 /**
@@ -23,27 +22,26 @@ public class Controller {
     public void processUser() {
         Scanner sc = new Scanner(System.in);
         //input
-        inputWordFromConsole(view.HELLO_WORD, sc);
-        inputWordFromConsole(view.WORLD_WORD, sc);
+        inputWordFromConsole(View.HELLO_WORD, sc);
+        inputWordFromConsole(View.WORLD_WORD, sc);
 
         //Output
-        view.printMessageAndData(view.OUTPUT_MESSAGE, model.getMessage());
+        view.printMessageAndData(View.OUTPUT_MESSAGE, model.getMessage());
     }
 
     // The Utility method
     private void inputWordFromConsole(String msg, Scanner sc) {
-        view.printMessage(view.INPUT_MESSAGE);
+        view.printMessage(View.INPUT_MESSAGE);
         while (sc.hasNextLine()) {
             String result = sc.nextLine();
             if (result.compareToIgnoreCase(msg) == 0) {
                 model.addMessage(result);
-                view.printMessage(view.SUCCESS_MESSAGE);
+                view.printMessage(View.SUCCESS_MESSAGE);
                 return;
             } else {
-                view.printMessage(view.WRONG_INPUT_DATA);
+                view.printMessage(View.WRONG_INPUT_DATA);
             }
         }
     }
-
 
 }
