@@ -18,15 +18,15 @@ public class Controller {
         this.view = view;
     }
 
-    public void startGame(int min, int max) {
-        processUser(min, max);
+    public void processUser(int min, int max) {
+        checkNumber(min, max);
     }
 
-    public void startGame() {
-        processUser(0, View.RAND_MAX);
+    public void processUser() {
+        checkNumber(0, View.RAND_MAX);
     }
 
-    private void processUser(int min, int max) {
+    private void checkNumber(int min, int max) {
         if (max < min) {
             int temp = max;
             max = min;

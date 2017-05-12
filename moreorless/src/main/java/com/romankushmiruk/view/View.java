@@ -1,5 +1,6 @@
 package com.romankushmiruk.view;
 
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -30,4 +31,5 @@ public class View {
     public void printRange(int min, int max) {
         System.out.println(RANGE_MESSAGE_PART1 + " " + min + " " + RANGE_MESSAGE_PART2 + " " + max);
     }
+
 }
