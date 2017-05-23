@@ -20,9 +20,4 @@ public class View {
                 GlobalConstants.RANGE_MESSAGE_PART2 + " " + max);
     }
 
-//     view.printMessageAndInt(GlobalConstants.SUCCESS_MESSAGE, model.getSecretNumber());
-    public void printSuccessMessage(){
-        System.out.println(GlobalConstants.SUCCESS_MESSAGE);
-    }
-
 }
