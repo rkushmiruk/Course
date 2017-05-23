@@ -1,18 +1,16 @@
 package com.romankushmiruk.view;
 
 import com.romankushmiruk.model.entity.Group;
+import com.romankushmiruk.util.StringConstants;
 
 import java.util.Arrays;
 
-/**
- * Created by roman on 14.05.17.
- */
 public class View {
-    public static void print(String message){
+    public static void print(String message) {
         System.out.println(message);
     }
 
-    public static String concatMessage(String...message){
+    public static String concatMessage(String... message) {
         StringBuilder sb = new StringBuilder();
         for (String s : message) {
             sb.append(s);
@@ -24,9 +22,13 @@ public class View {
         print(StringConstants.WRONG_INPUT_DATA);
     }
 
-    public void inputName() { print(StringConstants.INPUT_NAME); }
+    public void inputName() {
+        print(StringConstants.INPUT_NAME);
+    }
 
-    public void inputSurname() { print(StringConstants.INPUT_SURNAME); }
+    public void inputSurname() {
+        print(StringConstants.INPUT_SURNAME);
+    }
 
     public void inputPatronymic() {
         print(StringConstants.INPUT_PATRONYMIC);
@@ -76,7 +78,9 @@ public class View {
         print(StringConstants.INPUT_APARTMENT_NUMBER);
     }
 
-    public void inputComment() {print(StringConstants.INPUT_COMMENT);}
+    public void inputComment() {
+        print(StringConstants.INPUT_COMMENT);
+    }
 
     public void inputGroup() {
         print(StringConstants.INPUT_GROUP);

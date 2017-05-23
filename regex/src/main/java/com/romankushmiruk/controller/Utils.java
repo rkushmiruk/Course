@@ -1,14 +1,11 @@
 package com.romankushmiruk.controller;
 
-import com.romankushmiruk.model.Model;
 import com.romankushmiruk.model.entity.*;
 import com.romankushmiruk.view.View;
 
 import java.util.Scanner;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class Utils {
     private View view;
     private Scanner scanner;

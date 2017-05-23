@@ -3,9 +3,6 @@ package com.romankushmiruk.model.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by roman on 14.05.17.
- */
 public class NoteBook {
     private List<Note> notes = new ArrayList<>();
 

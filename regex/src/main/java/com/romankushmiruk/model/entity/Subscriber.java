@@ -1,8 +1,6 @@
 package com.romankushmiruk.model.entity;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class Subscriber {
     private String surname;
     private String name;
@@ -17,40 +15,8 @@ public class Subscriber {
         this.nickName = nickName;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
     public String getFullName() {
-        return surname + " " + name.substring(0,1) + ".";
+        return surname + " " + name.substring(0, 1) + ".";
     }
 
     @Override

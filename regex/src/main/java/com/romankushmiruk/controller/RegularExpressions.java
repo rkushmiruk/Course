@@ -1,8 +1,5 @@
 package com.romankushmiruk.controller;
 
-/**
- * Created by roman on 14.05.17.
- */
 public final class RegularExpressions {
     static String REG_NAME = "^[A-Z]{1}[a-z]{1,15}$";
     static String REG_NICKNAME = "^.{1,15}$";

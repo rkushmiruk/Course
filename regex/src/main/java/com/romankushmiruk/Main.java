@@ -7,9 +7,7 @@ import com.romankushmiruk.view.View;
 
 import java.util.Arrays;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class Main {
     public static void main(String[] args) {
         Model model = new Model();

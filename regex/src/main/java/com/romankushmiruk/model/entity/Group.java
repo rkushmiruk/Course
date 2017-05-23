@@ -1,8 +1,6 @@
 package com.romankushmiruk.model.entity;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public enum Group {
     FAMILY("Family"),
     FRIENDS("Friends"),
@@ -12,10 +10,6 @@ public enum Group {
 
     Group(String text) {
         this.text = text;
-    }
-
-    public String getText() {
-        return text;
     }
 
     public static Group fromString(String text) {

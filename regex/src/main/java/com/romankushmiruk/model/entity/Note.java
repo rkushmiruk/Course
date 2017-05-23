@@ -3,9 +3,7 @@ package com.romankushmiruk.model.entity;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class Note {
     private Subscriber subscriber;
     private SubscriberContacts subscriberContacts;
@@ -17,29 +15,6 @@ public class Note {
 
     public Note() {
     }
-
-    public Subscriber getSubscriber() {
-        return subscriber;
-    }
-    public SubscriberContacts getSubscriberContacts() {
-        return subscriberContacts;
-    }
-    public Group getGroup() {
-        return group;
-    }
-    public Address getAddress() {
-        return address;
-    }
-    public Date getTimeCreation() {
-        return timeCreation;
-    }
-    public Date getTimeLastModification() {
-        return timeLastModification;
-    }
-    public String getComment() {
-        return comment;
-    }
-
 
     public void setSubscriber(Subscriber subscriber) {
         this.subscriber = subscriber;

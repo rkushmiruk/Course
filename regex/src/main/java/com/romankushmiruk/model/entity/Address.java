@@ -1,8 +1,6 @@
 package com.romankushmiruk.model.entity;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class Address {
     private String index;
     private String city;
@@ -17,50 +15,6 @@ public class Address {
         this.street = street;
         this.building = building;
         this.flat = flat;
-    }
-
-    public String getIndex() {
-        return index;
-    }
-
-    public void setIndex(String index) {
-        this.index = index;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public String getBuilding() {
-        return building;
-    }
-
-    public void setBuilding(String building) {
-        this.building = building;
-    }
-
-    public String getFlat() {
-        return flat;
-    }
-
-    public void setFlat(String flat) {
-        this.flat = flat;
-    }
-
-    public String getFullAddress() {
-        return this.toString();
     }
 
     @Override

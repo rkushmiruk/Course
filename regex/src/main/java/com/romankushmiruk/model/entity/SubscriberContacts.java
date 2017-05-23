@@ -1,8 +1,6 @@
 package com.romankushmiruk.model.entity;
 
-/**
- * Created by roman on 14.05.17.
- */
+
 public class SubscriberContacts {
     private String localPhone;
     private String cellPhone1;
@@ -10,54 +8,11 @@ public class SubscriberContacts {
     private String email;
     private String skype;
 
-    public SubscriberContacts() {
-    }
-
     public SubscriberContacts(String localPhone, String cellPhone1, String cellPhone2, String email, String skype) {
         this.localPhone = localPhone;
         this.cellPhone1 = cellPhone1;
         this.cellPhone2 = cellPhone2;
         this.email = email;
-        this.skype = skype;
-    }
-
-    public String getLocalPhone() {
-        return localPhone;
-    }
-
-    public void setLocalPhone(String localPhone) {
-        this.localPhone = localPhone;
-    }
-
-    public String getCellPhone1() {
-        return cellPhone1;
-    }
-
-    public void setCellPhone1(String cellPhone1) {
-        this.cellPhone1 = cellPhone1;
-    }
-
-    public String getCellPhone2() {
-        return cellPhone2;
-    }
-
-    public void setCellPhone2(String cellPhone2) {
-        this.cellPhone2 = cellPhone2;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSkype() {
-        return skype;
-    }
-
-    public void setSkype(String skype) {
         this.skype = skype;
     }
 

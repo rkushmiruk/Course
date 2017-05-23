@@ -5,9 +5,6 @@ import com.romankushmiruk.view.View;
 
 import java.util.Scanner;
 
-/**
- * Created by roman on 14.05.17.
- */
 public class Controller {
 
     private Model model;
