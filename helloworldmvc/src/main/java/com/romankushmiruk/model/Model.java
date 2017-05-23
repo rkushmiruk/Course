@@ -1,8 +1,5 @@
 package com.romankushmiruk.model;
 
-/**
- * Created by roman on 11.05.17.
- */
 public class Model {
     private String message = "";
 
@@ -14,7 +11,4 @@ public class Model {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }
