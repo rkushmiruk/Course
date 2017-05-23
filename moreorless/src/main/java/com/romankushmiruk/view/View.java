@@ -1,24 +1,11 @@
 package com.romankushmiruk.view;
 
-import java.util.List;
-import java.util.ResourceBundle;
+import com.romankushmiruk.util.GlobalConstants;
 
 /**
  * Created by roman on 12.05.17.
  */
 public class View {
-    private static String resourceName = "StringConstants";
-    private static ResourceBundle stringConstants = ResourceBundle.getBundle(resourceName);
-
-    public static String WRONG_INPUT_DATA = stringConstants.getString("wrong_input_data");
-    public static String INPUT_NUMBER = stringConstants.getString("input_number");
-    public static int RAND_MAX = Integer.parseInt(String.valueOf(stringConstants.getString("rand_max")));
-    public static String RANGE_MESSAGE_PART1 = stringConstants.getString("range_message_part1");
-    public static String RANGE_MESSAGE_PART2 = stringConstants.getString("range_message_part2");
-    public static String NUMBER_NOT_RANGE = stringConstants.getString("number_not_range");
-    public static String SUCCESS_MESSAGE = stringConstants.getString("success_message");
-    public static String LESS_NUMBER = stringConstants.getString("less_number");
-    public static String GREATER_NUMBER = stringConstants.getString("greater_number");
 
     public void printMessage(String message) {
         System.out.println(message);
@@ -29,7 +16,13 @@ public class View {
     }
 
     public void printRange(int min, int max) {
-        System.out.println(RANGE_MESSAGE_PART1 + " " + min + " " + RANGE_MESSAGE_PART2 + " " + max);
+        System.out.println(GlobalConstants.RANGE_MESSAGE_PART1 + " " + min + " " +
+                GlobalConstants.RANGE_MESSAGE_PART2 + " " + max);
+    }
+
+//     view.printMessageAndInt(GlobalConstants.SUCCESS_MESSAGE, model.getSecretNumber());
+    public void printSuccessMessage(){
+        System.out.println(GlobalConstants.SUCCESS_MESSAGE);
     }
 
 }

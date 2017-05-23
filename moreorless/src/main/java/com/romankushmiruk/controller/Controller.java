@@ -1,14 +1,11 @@
 package com.romankushmiruk.controller;
 
+import com.romankushmiruk.util.GlobalConstants;
 import com.romankushmiruk.model.Model;
 import com.romankushmiruk.view.View;
 
-import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Created by roman on 12.05.17.
- */
 public class Controller {
     private Model model;
     private View view;
@@ -19,43 +16,23 @@ public class Controller {
     }
 
     public void processUser(int min, int max) {
-        checkNumber(min, max);
+        model.setSecretNumber(model.rand(min, max));
+        playGame();
     }
 
     public void processUser() {
-        checkNumber(0, View.RAND_MAX);
+        model.setSecretNumber(model.rand());
+        playGame();
     }
 
-    private void checkNumber(int min, int max) {
-        if (max < min) {
-            int temp = max;
-            max = min;
-            min = temp;
-        }
-        model.setNumber(rand(min, max));
-        int userNumber;
-        int secretNumber = model.getNumber();
+    private void playGame() {
         while (true) {
-            userNumber = inputValueInRange(min, max);
-            if (userNumber == secretNumber) {
-                view.printMessageAndInt(View.SUCCESS_MESSAGE, model.getNumber());
-                view.printMessage(model.getUserNumbers().toString());
+            if (model.checkNumber(inputValueInRange(model.getMinValue(), model.getMaxValue()))) {
+                view.printMessageAndInt(GlobalConstants.SUCCESS_MESSAGE, model.getSecretNumber());
                 return;
             }
-            if (userNumber < secretNumber) {
-                view.printMessage(View.LESS_NUMBER);
-                min = userNumber;
-            }
-            if (userNumber > secretNumber) {
-                view.printMessage(View.GREATER_NUMBER);
-                max = userNumber;
-            }
+            view.printMessage(GlobalConstants.NUMBER_NOT_RANGE);
         }
-    }
-
-    private int rand(int min, int max) {
-        Random r = new Random();
-        return r.nextInt(max - min) + min;
     }
 
     private int inputValueInRange(int min, int max) {
@@ -66,7 +43,7 @@ public class Controller {
             userNumber = inputIntValueWithScanner(scanner);
             model.getUserNumbers().add(userNumber);
             if (userNumber > max || userNumber < min) {
-                view.printMessage(View.NUMBER_NOT_RANGE);
+                view.printMessage(GlobalConstants.NUMBER_NOT_RANGE);
             } else {
                 return userNumber;
             }
@@ -74,10 +51,10 @@ public class Controller {
     }
 
     private int inputIntValueWithScanner(Scanner scanner) {
-        view.printMessage(View.INPUT_NUMBER);
+        view.printMessage(GlobalConstants.INPUT_NUMBER);
         while (!scanner.hasNextInt()) {
-            view.printMessage(View.WRONG_INPUT_DATA);
-            view.printMessage(View.INPUT_NUMBER);
+            view.printMessage(GlobalConstants.WRONG_INPUT_DATA);
+            view.printMessage(GlobalConstants.INPUT_NUMBER);
             scanner.next();
         }
         return scanner.nextInt();
