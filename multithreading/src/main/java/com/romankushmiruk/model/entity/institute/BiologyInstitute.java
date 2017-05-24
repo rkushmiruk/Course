@@ -10,7 +10,7 @@ import java.util.Queue;
 public class BiologyInstitute extends InstituteBuilder {
 
     @Override
-    public void applyStudents(Queue<Student> queue) {
+    public void applyStudent(Queue<Student> queue) {
         Iterator<Student> iterator = queue.iterator();
 
         while (iterator.hasNext()) {

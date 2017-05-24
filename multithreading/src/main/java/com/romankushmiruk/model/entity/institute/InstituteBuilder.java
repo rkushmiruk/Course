@@ -14,6 +14,6 @@ public abstract class InstituteBuilder {
         return students;
     }
 
-    public abstract void applyStudents(Queue<Student> queue);
+    public abstract void applyStudent(Queue<Student> queue);
 
 }

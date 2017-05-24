@@ -10,12 +10,13 @@ public class RandomInstitute extends InstituteBuilder {
     private static final int MAX_APPLY_STUDENTS = 5;
 
     @Override
-    public void applyStudents(Queue<Student> queue) {
+    public void applyStudent(Queue<Student> queue) {
         int count = 0;
         Iterator<Student> iterator = queue.iterator();
         Student student;
+        int randomNumber = rand(MIN_APPLY_STUDENTS,MAX_APPLY_STUDENTS);
         while (iterator.hasNext()) {
-            if (count != rand(MIN_APPLY_STUDENTS, MAX_APPLY_STUDENTS)) {
+            if (count != randomNumber) {
                 student = iterator.next();
                 getStudents().add(student);
                 System.out.println("Universal institute applied new entrant: " + student);
