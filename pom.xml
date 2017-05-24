@@ -13,6 +13,9 @@
         <module>flowcontrol</module>
         <module>helloworldmvc</module>
         <module>moreorless</module>
+        <module>regex</module>
+        <module>multithreading</module>
+        <module>pattern</module>
     </modules>
 
     <dependencies>
