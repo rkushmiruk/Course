@@ -30,8 +30,8 @@ public class Model {
         Objects.requireNonNull(max);
 
         setRange(min, max);
-        Random r = new Random();
-        return r.nextInt(GlobalConstants.RAND_MAX);
+
+        return (int) (Math.random() * (max - min)) + min;
     }
 
     public int rand() {
