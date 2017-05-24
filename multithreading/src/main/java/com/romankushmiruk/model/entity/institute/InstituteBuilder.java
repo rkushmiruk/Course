@@ -4,15 +4,16 @@ import com.romankushmiruk.model.entity.student.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 
 public abstract class InstituteBuilder {
     protected List<Student> students = new ArrayList<>();
 
-    public List<Student> getStudents(){
+    public List<Student> getStudents() {
         return students;
     }
 
-    public abstract void takeStudents();
+    public abstract void applyStudents(Queue<Student> queue);
 
 }

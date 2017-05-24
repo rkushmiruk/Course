@@ -8,7 +8,7 @@ public class Student {
         this.studentSpeciality = studentSpeciality;
     }
 
-    public StudentSpeciality getStudentSpeciality() {
+    public StudentSpeciality getSpeciality() {
         return studentSpeciality;
     }
 
