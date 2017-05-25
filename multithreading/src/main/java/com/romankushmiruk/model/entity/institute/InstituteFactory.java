@@ -1,19 +1,13 @@
 package com.romankushmiruk.model.entity.institute;
 
-import com.romankushmiruk.model.entity.student.Student;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-
-
-public abstract class InstituteFactory {
-    protected List<Student> students = new ArrayList<>();
-
-    public List<Student> getStudents() {
-        return students;
+public class InstituteFactory {
+    public static Institute createMathInstitute() {
+        return new MathInstitute();
     }
-
-    public abstract void applyStudent(Queue<Student> queue);
-
+    public static Institute createRandomInstitute() {
+        return new RandomInstitute();
+    }
+    public static Institute createBiologyInstitute() {
+        return new BiologyInstitute();
+    }
 }

@@ -7,7 +7,7 @@ import com.romankushmiruk.model.entity.student.StudentSpeciality;
 import java.util.Iterator;
 import java.util.Queue;
 
-public class MathInstitute extends InstituteFactory {
+public class MathInstitute extends Institute {
     @Override
     public void applyStudent(Queue<Student> queue) {
         Iterator<Student> iterator = queue.iterator();

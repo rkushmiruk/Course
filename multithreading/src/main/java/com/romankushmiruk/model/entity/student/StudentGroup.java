@@ -11,10 +11,10 @@ public class StudentGroup {
 
     private void initStudents() {
         for (int i = 0; i < NUMBER_BIOLOGY_STUDENTS; i++) {
-            students.add(new Student(StudentSpeciality.BIOLOGY));
+            students.add(StudentFactory.createStudent(StudentSpeciality.BIOLOGY));
         }
         for (int i = 0; i < NUMBER_MATH_STUDENTS; i++) {
-            students.add(new Student(StudentSpeciality.MATH));
+            students.add(StudentFactory.createStudent(StudentSpeciality.MATH));
         }
         Collections.shuffle(students);
     }

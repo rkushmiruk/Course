@@ -1,10 +1,7 @@
 package com.romankushmiruk.controller;
 
 import com.romankushmiruk.model.StudentQueue;
-import com.romankushmiruk.model.entity.institute.BiologyInstitute;
-import com.romankushmiruk.model.entity.institute.InstituteFactory;
-import com.romankushmiruk.model.entity.institute.MathInstitute;
-import com.romankushmiruk.model.entity.institute.RandomInstitute;
+import com.romankushmiruk.model.entity.institute.*;
 import com.romankushmiruk.util.GlobalConstants;
 import com.romankushmiruk.view.View;
 
@@ -12,17 +9,17 @@ import java.util.concurrent.BlockingQueue;
 
 public class StudentConsumer extends Thread {
     private BlockingQueue queue;
-    private InstituteFactory mathInstituteStudents;
-    private InstituteFactory biologyInstituteStudents;
-    private InstituteFactory universalInstituteStudents;
+    private Institute mathInstitute;
+    private Institute biologyInstitute;
+    private Institute randomInstitute;
     private View view;
 
     public StudentConsumer(StudentQueue studentQueue, View view) {
         this.queue = studentQueue.getQueue();
         this.view = view;
-        mathInstituteStudents = new MathInstitute();
-        biologyInstituteStudents = new BiologyInstitute();
-        universalInstituteStudents = new RandomInstitute();
+        mathInstitute = InstituteFactory.createMathInstitute();
+        biologyInstitute = InstituteFactory.createBiologyInstitute();
+        randomInstitute = InstituteFactory.createRandomInstitute();
     }
 
     @Override
@@ -31,23 +28,23 @@ public class StudentConsumer extends Thread {
 
         while (!queue.isEmpty()) {
             try {
-                mathInstituteStudents.applyStudent(queue);
-                sleep(20);
-                biologyInstituteStudents.applyStudent(queue);
-                sleep(20);
-                universalInstituteStudents.applyStudent(queue);
-                sleep(20);
+                mathInstitute.applyStudent(queue);
+                sleep(25);
+                biologyInstitute.applyStudent(queue);
+                sleep(25);
+                randomInstitute.applyStudent(queue);
+                sleep(25);
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        view.printMessage(GlobalConstants.MATH_INSTITUTE + getMathInstituteStudents().getStudents().size());
-        view.printMessage(GlobalConstants.BIOLOGY_INSTITUTE + getBiologyInstituteStudents().getStudents().size());
-        view.printMessage(GlobalConstants.RANDOM_INSTITUTE + getUniversalInstituteStudents().getStudents().size());
-        view.printMessage("sum " + (getMathInstituteStudents().getStudents().size() +
-                getBiologyInstituteStudents().getStudents().size() +
-                getUniversalInstituteStudents().getStudents().size()));
+        view.printMessage(GlobalConstants.MATH_INSTITUTE + getMathInstitute().getStudents().size());
+        view.printMessage(GlobalConstants.BIOLOGY_INSTITUTE + getBiologyInstitute().getStudents().size());
+        view.printMessage(GlobalConstants.RANDOM_INSTITUTE + getRandomInstitute().getStudents().size());
+        view.printMessage("sum " + (getMathInstitute().getStudents().size() +
+                getBiologyInstitute().getStudents().size() +
+                getRandomInstitute().getStudents().size()));
     }
 
     private void waitForFirstEntrants() {
@@ -58,15 +55,15 @@ public class StudentConsumer extends Thread {
         }
     }
 
-    private InstituteFactory getMathInstituteStudents() {
-        return mathInstituteStudents;
+    private Institute getMathInstitute() {
+        return mathInstitute;
     }
 
-    private InstituteFactory getBiologyInstituteStudents() {
-        return biologyInstituteStudents;
+    private Institute getBiologyInstitute() {
+        return biologyInstitute;
     }
 
-    private InstituteFactory getUniversalInstituteStudents() {
-        return universalInstituteStudents;
+    private Institute getRandomInstitute() {
+        return randomInstitute;
     }
 }
