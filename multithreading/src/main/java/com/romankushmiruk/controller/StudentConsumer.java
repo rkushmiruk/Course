@@ -2,7 +2,7 @@ package com.romankushmiruk.controller;
 
 import com.romankushmiruk.model.StudentQueue;
 import com.romankushmiruk.model.entity.institute.BiologyInstitute;
-import com.romankushmiruk.model.entity.institute.InstituteBuilder;
+import com.romankushmiruk.model.entity.institute.InstituteFactory;
 import com.romankushmiruk.model.entity.institute.MathInstitute;
 import com.romankushmiruk.model.entity.institute.RandomInstitute;
 import com.romankushmiruk.util.GlobalConstants;
@@ -12,9 +12,9 @@ import java.util.concurrent.BlockingQueue;
 
 public class StudentConsumer extends Thread {
     private BlockingQueue queue;
-    private InstituteBuilder mathInstituteStudents;
-    private InstituteBuilder biologyInstituteStudents;
-    private InstituteBuilder universalInstituteStudents;
+    private InstituteFactory mathInstituteStudents;
+    private InstituteFactory biologyInstituteStudents;
+    private InstituteFactory universalInstituteStudents;
     private View view;
 
     public StudentConsumer(StudentQueue studentQueue, View view) {
@@ -58,15 +58,15 @@ public class StudentConsumer extends Thread {
         }
     }
 
-    private InstituteBuilder getMathInstituteStudents() {
+    private InstituteFactory getMathInstituteStudents() {
         return mathInstituteStudents;
     }
 
-    private InstituteBuilder getBiologyInstituteStudents() {
+    private InstituteFactory getBiologyInstituteStudents() {
         return biologyInstituteStudents;
     }
 
-    private InstituteBuilder getUniversalInstituteStudents() {
+    private InstituteFactory getUniversalInstituteStudents() {
         return universalInstituteStudents;
     }
 }

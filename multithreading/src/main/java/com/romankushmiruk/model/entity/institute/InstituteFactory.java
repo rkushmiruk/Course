@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 
-public abstract class InstituteBuilder {
+public abstract class InstituteFactory {
     protected List<Student> students = new ArrayList<>();
 
     public List<Student> getStudents() {

@@ -5,7 +5,7 @@ import com.romankushmiruk.model.entity.student.Student;
 import java.util.Iterator;
 import java.util.Queue;
 
-public class RandomInstitute extends InstituteBuilder {
+public class RandomInstitute extends InstituteFactory {
     private static final int MIN_APPLY_STUDENTS = 1;
     private static final int MAX_APPLY_STUDENTS = 5;
 
