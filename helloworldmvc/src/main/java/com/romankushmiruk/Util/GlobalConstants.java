@@ -1,4 +1,4 @@
-package com.romankushmiruk.Util;
+package com.romankushmiruk.util;
 
 import java.util.ResourceBundle;
 

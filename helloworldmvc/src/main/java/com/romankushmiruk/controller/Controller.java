@@ -1,6 +1,6 @@
 package com.romankushmiruk.controller;
 
-import com.romankushmiruk.Util.GlobalConstants;
+import com.romankushmiruk.util.GlobalConstants;
 import com.romankushmiruk.model.Model;
 import com.romankushmiruk.view.View;
 

@@ -16,6 +16,7 @@
         <module>regex</module>
         <module>multithreading</module>
         <module>pattern</module>
+        <module>reflection</module>
     </modules>
 
     <dependencies>
