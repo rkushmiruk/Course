@@ -17,6 +17,7 @@
         <module>multithreading</module>
         <module>pattern</module>
         <module>reflection</module>
+        <module>arraylist</module>
     </modules>
 
     <dependencies>

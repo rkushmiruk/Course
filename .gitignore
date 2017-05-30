@@ -4,6 +4,7 @@
 *.iml
 *.ipr
 */target
+.DS_STORE
 
 ### NetBeans ###
 nbproject/private/
