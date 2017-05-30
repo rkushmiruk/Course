@@ -4,6 +4,7 @@ import com.romankushmiruk.util.GlobalConstants;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -11,20 +12,20 @@ import java.util.List;
 
 public class Reflection {
     private Class clazz;
-    Object object;
+    private Object object;
 
     public Reflection(Object object) {
         clazz = object.getClass();
         this.object = object;
     }
 
+    public String getSimpleName() {
+        return clazz.getPackage() + " " + clazz.getSimpleName();
+    }
+
     public Constructor[] getConstructors() {
         Constructor[] constructors = clazz.getConstructors();
         return constructors;
-    }
-
-    public String getSimpleName() {
-        return clazz.getSimpleName();
     }
 
     public List<String> getModifier() {
@@ -42,7 +43,6 @@ public class Reflection {
         if (modifiers.isEmpty()) {
             modifiers.add(GlobalConstants.MODIFIER_DEFAULT_PACKAGE);
         }
-
         if (Modifier.isFinal(mods)) {
             modifiers.add(GlobalConstants.MODIFIER_FINAL);
         }
@@ -64,6 +64,7 @@ public class Reflection {
         Method[] methods = getMethods();
         Annotation[] annotations;
         Annotation[][] list = new Annotation[methods.length][];
+
         for (int i = 0; i < methods.length; i++) {
             annotations = methods[i].getAnnotations();
             list[i] = annotations;
@@ -71,4 +72,15 @@ public class Reflection {
         return list;
     }
 
+    public Class getSuperClass() {
+        return clazz.getSuperclass();
+    }
+
+    public Field[] getFields() {
+        return clazz.getDeclaredFields();
+    }
+
+    public Class[] getInterfaces() {
+        return clazz.getInterfaces();
+    }
 }

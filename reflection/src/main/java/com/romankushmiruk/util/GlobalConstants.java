@@ -14,4 +14,13 @@ public interface GlobalConstants {
     String MODIFIER_ABSTRACT = stringConstants.getString("MODIFIER_ABSTRACT");
     String MODIFIER_STATIC = stringConstants.getString("MODIFIER_STATIC");
 
+    String CLASS_NAME = stringConstants.getString("CLASS_NAME");
+    String CLASS_MODIFIERS = stringConstants.getString("CLASS_MODIFIERS");
+    String CLASS_CONSTRUCTORS = stringConstants.getString("CLASS_CONSTRUCTORS");
+    String CLASS_METHODS = stringConstants.getString("CLASS_METHODS");
+    String SUPERCLASS = stringConstants.getString("SUPERCLASS");
+    String CLASS_FIELDS = stringConstants.getString("CLASS_FIELDS");
+    String CLASS_INTERFACES = stringConstants.getString("CLASS_INTERFACES");
+    String METHODS_ANNOTATIONS = stringConstants.getString("METHODS_ANNOTATIONS");
+
 }
